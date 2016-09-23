@@ -16,7 +16,7 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
-import com.courence.common.util.ConfigUtils;
+import com.courence.constant.SystemConstants;
 import com.courence.jms.IJMSService;
 
 
@@ -49,7 +49,7 @@ public class JMSActiveMQService implements IJMSService {
 	 * @return
 	 */
 	private String getClassQueueName(Class<?> cls){
-		return ConfigUtils.getValue("MAIN.systemName")+cls.getSimpleName();
+		return SystemConstants.SYSTEM_NAME+"-"+cls.getName();
 	}
 
 	@Override

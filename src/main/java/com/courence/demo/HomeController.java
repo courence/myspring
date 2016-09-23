@@ -18,11 +18,11 @@ public class HomeController {
     @RequestMapping({"/","/index"})
     public String showHomePage(Map<String,Object> model)
     {
-        model.put("WelcomeWords", "欢迎你，老大");
+//        model.put("WelcomeWords", "欢迎你，老大");
         //System.out.println("showHomepage executed, using stock");
 //        jmsService.send(new T(1));
-        T a = (T) jmsService.receive();
-        a.print();
+//        T a = (T) jmsService.receive();
+//        a.print();
         return "index";
     }
 }
