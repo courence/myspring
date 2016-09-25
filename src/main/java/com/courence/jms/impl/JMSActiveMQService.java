@@ -54,7 +54,7 @@ public class JMSActiveMQService implements IJMSService {
 
 	@Override
 	public <T extends Serializable> void send(final T obj) {
-		send(obj,getClassQueueName(obj.getClass()));
+		send(getClassQueueName(obj.getClass()),obj);
 	}
 	
 	
@@ -66,8 +66,8 @@ public class JMSActiveMQService implements IJMSService {
 	}
 
 	@Override
-	public <T extends Serializable> void send(final T obj, String queueName) {
-		send(obj, getDestinationByName(queueName));
+	public <T extends Serializable> void send(String queueName,final T obj) {
+		send(getDestinationByName(queueName),obj);
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class JMSActiveMQService implements IJMSService {
 	}
 
 	@Override
-	public <T extends Serializable> void send(final T objMsg, Destination destination) {
+	public <T extends Serializable> void send(Destination destination,final T objMsg) {
 		jmsTemplate.send(destination,new MessageCreator(){
 			public Message createMessage(Session session) throws JMSException {
 				ObjectMessage obj = session.createObjectMessage(objMsg);

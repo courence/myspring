@@ -25,7 +25,7 @@ public interface IJMSService {
 	 * @param queueName
 	 * @return
 	 */
-	public <T extends Serializable> void send(final T obj,String queueName);
+	public <T extends Serializable> void send(String queueName,final T obj);
 	
 	/**
 	 * 向destination发送对象数据
@@ -33,7 +33,7 @@ public interface IJMSService {
 	 * @param queueName
 	 * @return
 	 */
-	public <T extends Serializable> void send(final T obj,Destination destination);
+	public <T extends Serializable> void send(Destination destination,final T obj);
 	
 	/**
 	 * 从类队列中获取对象数据
