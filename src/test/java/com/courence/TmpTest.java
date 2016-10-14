@@ -11,8 +11,10 @@ package com.courence;
 public class TmpTest {
 
 	public static void main(String[] args) {
-		byte[] h = new byte[64*1024*1024];
-		System.gc();
+		String str1 = new StringBuilder("是的").append("撒地方").toString();
+		System.out.println(str1.intern()==str1);
+		String str2 = new StringBuilder("ja1").append("va").toString();
+		System.out.println(str2.intern()==str2);
 	}
 
 

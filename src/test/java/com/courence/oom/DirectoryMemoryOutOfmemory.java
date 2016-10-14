@@ -4,6 +4,13 @@ import java.lang.reflect.Field;
 
 import sun.misc.Unsafe;
 
+/**
+ * vm args: -Xmx20M -XX:MaxDirectMemorySize=10M
+ * Description: 
+ * @author jh 
+ * date Oct 13, 2016
+ * version V1.0
+ */
 public class DirectoryMemoryOutOfmemory {
 	private static final int ONE_MB = 1024 * 1024;
 
