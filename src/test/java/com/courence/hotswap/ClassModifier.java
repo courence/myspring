@@ -1,7 +1,7 @@
 package com.courence.hotswap;
 
 public class ClassModifier {
-	private static final int CONSTANT_POOL_COUNT_INDEX = 0;
+	private static final int CONSTANT_POOL_COUNT_INDEX = 8;
 	private static final int CONSTANT_Utf8_info = 1;
 	private static final int[] CONSTANT_ITEM_LENGTH = {-1,-1,-1,5,5,9,9,3,3,5,5,5,5};
 	private static final int u1 = 1;
