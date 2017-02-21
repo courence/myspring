@@ -3,10 +3,15 @@
  */
 package com.courence;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Observable;
+import java.util.Observer;
 
-import com.courence.common.util.HttpClientTools;
+import javax.sound.midi.Sequencer;
 
 /**
  * Description:
@@ -15,21 +20,34 @@ import com.courence.common.util.HttpClientTools;
  * @author jh date Oct 9, 2016 version V1.0
  */
 public class TmpTest {
-	static abstract class Human{
+
+	public static void main(String[] args) throws ParseException{
+
 		
-	}
-	static class Man extends Human{
+		int[] a = new int[0];
 		
-	}
-	static class woman extends Human{
+		System.out.println(a.length);
 		
-	}
-	public static void main(String[] args){
-		Man man = new Man();
-		sayHello(man);
 	}
 	
-	public static void sayHello(Human guy){
-		
+	
+}
+class AA extends UnicastRemoteObject implements T,T1{
+
+	protected AA(int port) throws RemoteException {
+		super(port);
+		// TODO Auto-generated constructor stub
 	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+}
+interface T{
+
+}
+interface T1{
+
 }
